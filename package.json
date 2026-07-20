@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Playwright automated tests",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "postinstall": "git config core.hooksPath .husky",
+    "lint": "eslint . --ext .ts,.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cosmin0898/playwright-automation.git"
@@ -16,6 +19,7 @@
   },
   "homepage": "https://github.com/cosmin0898/playwright-automation#readme",
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@playwright/test": "^1.61.1",
     "@types/axe-core": "^3.0.6",
     "@types/lodash": "^4.17.20",
@@ -27,11 +31,12 @@
     "eslint-config-prettier": "^10.1.8",
     "form-data": "^4.0.6",
     "husky": "^9.1.7",
-    "lint-staged": "^17.1.0",
+    "lint-staged": "^15.2.5",
     "lodash": "^4.17.21",
     "prettier": "^3.9.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3",
+    "typescript-eslint": "^8.64.0",
     "uuid": "^14.0.1",
     "xpath": "^0.0.34"
   },
