@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "module": "NodeNext",
+        "target": "ES2020",
+        "lib": ["ES2023", "DOM"],
+        "types": ["node"],
+        "moduleResolution": "NodeNext",
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "ignoreDeprecations": "6.0",
+        "baseUrl": ".",
+        "paths": {
+            "@ui/*": ["./features/ui/*"],
+        }
+    }
+}

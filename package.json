@@ -17,6 +17,33 @@
   "homepage": "https://github.com/cosmin0898/playwright-automation#readme",
   "devDependencies": {
     "@playwright/test": "^1.61.1",
-    "@types/node": "^26.1.1"
+    "@types/axe-core": "^3.0.6",
+    "@types/lodash": "^4.17.20",
+    "@types/node": "^26.1.1",
+    "@typescript-eslint/eslint-plugin": "^8.35.0",
+    "@typescript-eslint/parser": "^8.35.0",
+    "dotenv": "^16.5.0",
+    "eslint": "^10.7.0",
+    "eslint-config-prettier": "^10.1.8",
+    "form-data": "^4.0.6",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.1.0",
+    "lodash": "^4.17.21",
+    "prettier": "^3.9.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
+    "uuid": "^14.0.1",
+    "xpath": "^0.0.34"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write",
+      "eslint",
+      "bash -c 'tsc --noEmit'"
+    ],
+    "*.json": [
+      "prettier --write",
+      "eslint"
+    ]
   }
 }
