@@ -1,16 +1,20 @@
-name: Playwright Tests
+# Workflow for automated environment
+
+name: Playwright Tests Scheduled
 on:
-  push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
+  workflow_dispatch:
+  schedule:
+     - cron: "0 4 * * *"
+run-name: "Scheduled Run"
 jobs:
   test:
-    timeout-minutes: 60
+    timeout-minutes: 120
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
+    - name: Checkout current repo
+      uses: actions/checkout@v4
+    - name: Setup node
+      uses: actions/setup-node@v4
       with:
         node-version: lts/*
     - name: Install dependencies
